@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pallet Paradise - Comprehensive pallet stacking and warehouse safety guidelines. Interactive 360° training, safety protocols, and best practices for efficient warehouse operations.">
+<title>Pallet Paradise - Advanced Pallet Stacking & Warehouse Safety Guidelines</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-blue: #003d7a;
+    --secondary-blue: #0056a6;
+    --accent-blue: #4a90e2;
+    --light-blue: #e8f1fc;
+    --danger-red: #d32f2f;
+    --warning-orange: #f57c00;
+    --success-green: #388e3c;
+    --dark-gray: #333333;
+    --medium-gray: #757575;
+    --light-gray: #f5f7fa;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.12);
+    --border-radius: 8px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--primary-blue);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header & Navigation */
+  header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M20,20 L80,20 L80,80 L20,80 Z" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none"/><path d="M10,10 L40,10 L40,40 L10,40 Z" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none"/></svg>');
+    opacity: 0.3;
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--white);
+  }
+
+  .header-subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+  }
+
+  /* Navigation */
+  nav {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  height: 45px;   
+  width: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(5deg);
+}
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-blue);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-blue);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Main Sections */
+  section {
+    padding: 80px 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Visual Safety Section */
+  .visual-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .stacking-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .stacking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .unsafe {
+    border-top: 4px solid var(--danger-red);
+  }
+
+  .safe {
+    border-top: 4px solid var(--success-green);
+  }
+
+  .stacking-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .stacking-header h3 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .stacking-visual {
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+  }
+
+  .pallet {
+    width: 180px;
+    height: 20px;
+    background-color: #8B4513;
+    position: relative;
+  }
+
+  .unsafe-pallets .pallet-box {
+    width: 60px;
+    height: 40px;
+    background-color: var(--danger-red);
+    position: absolute;
+    bottom: 20px;
+    border-radius: 4px;
+  }
+
+  .unsafe-pallets .box1 { left: 20px; }
+  .unsafe-pallets .box2 { left: 90px; width: 80px; }
+  .unsafe-pallets .box3 { left: 40px; bottom: 65px; width: 100px; }
+
+  .safe-pallets .pallet-box {
+    width: 80px;
+    height: 40px;
+    background-color: var(--success-green);
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    border-radius: 4px;
+  }
+
+  .safe-pallets .box2 { bottom: 65px; }
+  .safe-pallets .box3 { bottom: 110px; }
+
+  .stacking-details {
+    margin-top: 20px;
+  }
+
+  .stacking-details ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .stacking-details li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .stacking-details li:before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    color: var(--medium-gray);
+  }
+
+  .unsafe .stacking-details li:before {
+    color: var(--danger-red);
+  }
+
+  .safe .stacking-details li:before {
+    color: var(--success-green);
+  }
+
+  /* Safety Rules Grid */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .rule-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    height: 100%;
+  }
+
+  .rule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .rule-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    height: 80px;
+    width: 80px;
+    background-color: var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .rule-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .rule-card p {
+    color: var(--medium-gray);
+    margin-bottom: 20px;
+  }
+
+  .rule-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .rule-tag {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* Best Practices */
+  .practices-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .practice-main {
+    flex: 1;
+    min-width: 300px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+  }
+
+  .practice-steps {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .step {
+    display: flex;
+    margin-bottom: 30px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+  }
+
+  .step-number {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Interactive Safety Checklist */
+  .checklist-container {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-top: 40px;
+  }
+
+  .checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+  }
+
+  .checklist-item:hover {
+    background-color: #f9f9f9;
+  }
+
+  .checklist-item input {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .checklist-item label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+
+  .checklist-item.completed label {
+    text-decoration: line-through;
+    color: var(--medium-gray);
+  }
+
+  .checklist-progress {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .checklist-progress-bar {
+    height: 100%;
+    background-color: var(--success-green);
+    width: 0%;
+    transition: width 0.5s;
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 60px 0 30px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+  }
+
+  .footer-column h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .footer-column ul {
+    list-style: none;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-column a:hover {
+    color: var(--white);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+
+  /* Interactive 360° Training Section */
+  .interactive-container {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .interactive-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .interactive-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+  }
+
+  .interactive-instructions {
+    background-color: var(--light-blue);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-blue);
+    font-weight: 500;
+  }
+
+  .instruction-item i {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+  }
+
+  .iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-hover);
+    background-color: var(--light-gray);
+  }
+
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+  }
+
+  .interactive-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .action-button {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .action-button:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .action-button.secondary {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+  }
+
+  .action-button.secondary:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+  }
+
+  .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: var(--border-radius);
+    transition: opacity 0.5s;
+  }
+
+  .loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .loading-spinner {
+    border: 4px solid var(--light-blue);
+    border-top: 4px solid var(--accent-blue);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loading-text {
+    color: var(--primary-blue);
+    font-weight: 600;
+  }
+
+  /* Mobile Menu Toggle */
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    
+    .header-subtitle {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+
+    .header-content > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .header-content > div > a {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+    
+    .nav-container {
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+    
+    .nav-links li {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 10px;
+    }
+    
+    .visual-comparison {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stacking-card {
+      max-width: 100%;
+    }
+
+    .interactive-instructions {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .instruction-item {
+      justify-content: center;
+    }
+
+    .interactive-actions {
+      flex-direction: column;
+    }
+
+    .action-button {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .iframe-wrapper {
+      padding-bottom: 75%; /* Taller aspect ratio for mobile */
+    }
+
+    .rules-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .practices-container {
+      flex-direction: column;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .header-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+    }
+
+    .interactive-container {
+      padding: 20px;
+    }
+
+    .checklist-container {
+      padding: 20px;
+    }
+
+    .rule-card {
+      padding: 20px;
+    }
+
+    .stacking-card {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1><i class="fas fa-pallet"></i> Pallet Paradise - Warehouse Safety Excellence</h1>
+        <p class="header-subtitle">Enhancing warehouse safety & efficiency through comprehensive visual guidelines, interactive training, and evidence-based safety protocols. Reduce accidents and improve productivity with Pallet Paradise.</p>
+        <div style="margin-top: 30px;">
+          <a href="#interactive" style="background-color: var(--accent-blue); color: white; padding: 12px 30px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; display: inline-block; margin-right: 15px;">Interactive Training</a>
+          <a href="#visual" style="background-color: transparent; color: white; padding: 12px 30px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; border: 2px solid white; display: inline-block; margin-right: 15px;">Visual Guidelines</a>
+          <a href="#checklist" style="background-color: transparent; color: white; padding: 12px 30px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; border: 2px solid white; display: inline-block;">Safety Checklist</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+  <div class="container nav-container">
+    <a href="#" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="images/logo.jpeg" alt="Pallet Paradise Logo" class="logo-img">
+      <span>Pallet Paradise</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#visual">Visual Safety</a></li>
+      <li><a href="#interactive">Interactive Training</a></li>
+      <li><a href="#rules">Safety Rules</a></li>
+      <li><a href="#best">Best Practices</a></li>
+      <li><a href="#checklist">Safety Checklist</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Visual Safety Section -->
+  <section id="visual">
+    <div class="container">
+      <div class="section-header">
+        <h2>Visual Pallet Stacking Safety Comparison</h2>
+        <p>Visual representation of proper vs improper pallet stacking techniques with detailed safety implications</p>
+      </div>
+      
+      <div class="visual-comparison">
+        <!-- Unsafe Stacking -->
+        <div class="stacking-card unsafe">
+          <div class="stacking-header">
+            <i class="fas fa-times-circle" style="color: var(--danger-red); font-size: 1.8rem;"></i>
+            <h3>Unsafe Stacking Practices</h3>
+          </div>
+          
+          <div class="stacking-visual">
+            <div class="unsafe-pallets">
+              <div class="pallet">
+                <div class="pallet-box box1"></div>
+                <div class="pallet-box box2"></div>
+                <div class="pallet-box box3"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stacking-details">
+            <h4 style="color: var(--danger-red); margin-bottom: 15px;">Common Unsafe Practices:</h4>
+            <ul>
+              <li>Unbalanced load distribution causing instability</li>
+              <li>Exceeding recommended height limits</li>
+              <li>Mixed pallet types creating uneven surfaces</li>
+              <li>Damaged pallets still in use</li>
+              <li>Improperly secured loads without strapping or wrap</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Safe Stacking -->
+        <div class="stacking-card safe">
+          <div class="stacking-header">
+            <i class="fas fa-check-circle" style="color: var(--success-green); font-size: 1.8rem;"></i>
+            <h3>Safe Stacking Practices</h3>
+          </div>
+          
+          <div class="stacking-visual">
+            <div class="safe-pallets">
+              <div class="pallet">
+                <div class="pallet-box box1"></div>
+                <div class="pallet-box box2"></div>
+                <div class="pallet-box box3"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stacking-details">
+            <h4 style="color: var(--success-green); margin-bottom: 15px;">Key Safety Principles:</h4>
+            <ul>
+              <li>Uniform weight distribution across the pallet</li>
+              <li>Height appropriate for load stability and equipment</li>
+              <li>Consistent box sizes for stable stacking</li>
+              <li>Properly inspected pallets without damage</li>
+              <li>Secure loads with appropriate strapping or wrap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 360° Training Section -->
+  <section id="interactive" style="background-color: var(--light-gray);">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-vr-cardboard"></i> 360° Interactive Training Experience</h2>
+        <p>Immerse yourself in an interactive 360° virtual environment to learn pallet stacking and storing rules through hands-on exploration</p>
+      </div>
+      
+      <div class="interactive-container">
+        <div class="interactive-header">
+          <h3>Pallet Stacking & Storing Rules</h3>
+          <div class="interactive-instructions">
+            <div class="instruction-item">
+              <i class="fas fa-mouse"></i>
+              <span>Use your mouse to look around</span>
+            </div>
+            <div class="instruction-item">
+              <i class="fas fa-hand-pointer"></i>
+              <span>Click hotspots for information</span>
+            </div>
+            <div class="instruction-item">
+              <i class="fas fa-arrows-alt"></i>
+              <span>Navigate using arrows</span>
+            </div>
+            <div class="instruction-item">
+              <i class="fas fa-question-circle"></i>
+              <span>Take Quiz to test your knowledge</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="iframe-wrapper" id="training-iframe-wrapper">
+          <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Interactive Training...</div>
+          </div>
+          <iframe 
+            id="training-iframe"
+            src="https://trymeonhoney69.github.io/PALLET-STACKING-STORING-RULES/" 
+            title="360° Interactive Pallet Stacking Training"
+            allow="fullscreen; accelerometer; gyroscope; vr"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <div class="interactive-actions">
+          <a href="https://trymeonhoney69.github.io/PALLET-STACKING-STORING-RULES/" target="_blank" class="action-button" id="open-fullscreen-btn">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Open in New Tab</span>
+          </a>
+          <button class="action-button secondary" id="reload-iframe-btn">
+            <i class="fas fa-redo"></i>
+            <span>Reload Training</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Rules Section -->
+  <section id="rules" style="background-color: var(--light-blue);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Key Safety Rules & Protocols</h2>
+        <p>Essential warehouse safety rules with visual indicators and implementation guidelines</p>
+      </div>
+      
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-weight-hanging"></i>
+          </div>
+          <h3>Weight Limit Compliance</h3>
+          <p>Never exceed the pallet's maximum load capacity. Check manufacturer ratings and consider dynamic vs static load limits.</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Capacity</span>
+            <span class="rule-tag">OSHA Standard</span>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-arrow-up"></i>
+          </div>
+          <h3>Stack Height Control</h3>
+          <p>Follow facility height limits (typically 15-20 feet) to avoid tipping hazards and ensure forklift operator visibility.</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Visibility</span>
+            <span class="rule-tag">Stability</span>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3>PPE Requirements</h3>
+          <p>Mandatory PPE includes safety helmets, high-visibility vests, steel-toed boots, and cut-resistant gloves.</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Protection</span>
+            <span class="rule-tag">Compliance</span>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-truck-loading"></i>
+          </div>
+          <h3>Forklift Operations</h3>
+          <p>Only certified operators should handle forklifts. Maintain clear sightlines and use spotters in congested areas.</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Certification</span>
+            <span class="rule-tag">Operation</span>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-boxes"></i>
+          </div>
+          <h3>Load Distribution</h3>
+          <p>Heaviest items at the bottom, centered on the pallet. Avoid overhang beyond pallet edges (max 1-2 inches).</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Balance</span>
+            <span class="rule-tag">Stability</span>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>Hazard Awareness</h3>
+          <p>Regular inspections for damaged pallets, leaking containers, and unstable stacks. Clear labeling of hazardous materials.</p>
+          <div class="rule-tags">
+            <span class="rule-tag">Inspection</span>
+            <span class="rule-tag">Awareness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices Section -->
+  <section id="best">
+    <div class="container">
+      <div class="section-header">
+        <h2>Best Practices for Warehouse Safety</h2>
+        <p>Proven methods and procedures to enhance safety, efficiency, and compliance in warehouse operations</p>
+      </div>
+      
+      <div class="practices-container">
+        <div class="practice-main">
+          <h3>Comprehensive Pallet Safety Protocol</h3>
+          <p style="margin: 20px 0;">Implementing a systematic approach to pallet handling reduces accidents by up to 65%. Follow these evidence-based guidelines:</p>
+          
+          <div style="background-color: var(--light-blue); padding: 20px; border-radius: var(--border-radius); margin: 25px 0;">
+            <h4 style="color: var(--primary-blue); margin-bottom: 10px;">Key Metrics for Success:</h4>
+            <ul style="columns: 2;">
+              <li>Zero overhang > 2 inches</li>
+              <li>100% pallet inspection</li>
+              <li>95%+ load stability rating</li>
+              <li>Clear aisle marking</li>
+            </ul>
+          </div>
+          
+          <p>Regular safety audits and employee training sessions should be conducted quarterly to maintain compliance and address emerging risks in warehouse operations.</p>
+        </div>
+        
+        <div class="practice-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Pre-Stacking Inspection</h4>
+              <p>Check pallets for damage, nails, or loose boards before loading. Discard compromised pallets immediately.</p>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>Load Planning</h4>
+              <p>Plan the load configuration considering weight distribution, product compatibility, and destination.</p>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>Secure Stacking</h4>
+              <p>Use interlocking patterns for boxes and secure with shrink wrap or straps for transport.</p>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Post-Stacking Verification</h4>
+              <p>Inspect completed stacks for stability before moving. Use a push test for secure stacks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Safety Checklist -->
+  <section id="checklist" style="background-color: var(--light-blue);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Daily Safety Checklist</h2>
+        <p>Interactive checklist for daily warehouse safety inspections. Complete all items before operations begin.</p>
+      </div>
+      
+      <div class="checklist-container">
+        <div class="checklist-header">
+          <h3>Pallet Stacking Safety Inspection</h3>
+          <div id="checklist-progress-text">0/10 Completed</div>
+        </div>
+        
+        <div class="checklist-items">
+          <div class="checklist-item">
+            <input type="checkbox" id="check1" class="safety-check">
+            <label for="check1">Inspect pallets for damage, cracks, or loose boards</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check2" class="safety-check">
+            <label for="check2">Verify load does not exceed pallet weight capacity</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check3" class="safety-check">
+            <label for="check3">Ensure proper PPE is worn (helmet, vest, boots, gloves)</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check4" class="safety-check">
+            <label for="check4">Check that stack height is within facility limits</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check5" class="safety-check">
+            <label for="check5">Confirm load is centered with no excessive overhang</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check6" class="safety-check">
+            <label for="check6">Inspect shrink wrap/strapping for secure containment</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check7" class="safety-check">
+            <label for="check7">Verify clear walkways with no obstruction to exits</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check8" class="safety-check">
+            <label for="check8">Check forklift functionality and safety features</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check9" class="safety-check">
+            <label for="check9">Ensure proper signage for hazardous materials</label>
+          </div>
+          
+          <div class="checklist-item">
+            <input type="checkbox" id="check10" class="safety-check">
+            <label for="check10">Confirm emergency equipment is accessible and functional</label>
+          </div>
+        </div>
+        
+        <div class="checklist-progress">
+          <div class="checklist-progress-bar" id="checklist-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Pallet Paradise</h3>
+          <p>Pallet Paradise provides comprehensive safety guidelines and training materials for warehouse operations since 2023. Enhancing warehouse safety & efficiency.</p>
+          <div style="margin-top: 20px;">
+            <i class="fab fa-linkedin" style="margin-right: 15px; font-size: 1.2rem;"></i>
+            <i class="fab fa-twitter" style="margin-right: 15px; font-size: 1.2rem;"></i>
+            <i class="fab fa-youtube" style="font-size: 1.2rem;"></i>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#visual">Visual Safety Guidelines</a></li>
+            <li><a href="#interactive">Interactive 360° Training</a></li>
+            <li><a href="#rules">Safety Rules & Protocols</a></li>
+            <li><a href="#best">Best Practices</a></li>
+            <li><a href="#checklist">Safety Checklist</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">OSHA Warehouse Guidelines</a></li>
+            <li><a href="#">Pallet Safety Standards</a></li>
+            <li><a href="#">Forklift Certification</a></li>
+            <li><a href="#">Emergency Procedures</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> teammonochrome@gmail.com</li>
+            <li><i class="fas fa-phone" style="margin-right: 10px;"></i>9800000000</li>
+            <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Kathmandu, Tinkune</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2023 Pallet Paradise - Warehouse Safety & Pallet Stacking Guidelines. All rights reserved. | This material is for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive checklist functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize checklist functionality
+      const checkboxes = document.querySelectorAll('.safety-check');
+      const progressBar = document.getElementById('checklist-progress-bar');
+      const progressText = document.getElementById('checklist-progress-text');
+      
+      // Update progress bar and text
+      function updateProgress() {
+        const checkedCount = document.querySelectorAll('.safety-check:checked').length;
+        const totalCount = checkboxes.length;
+        const percentage = (checkedCount / totalCount) * 100;
+        
+        if (progressBar) {
+          progressBar.style.width = percentage + '%';
+        }
+        
+        if (progressText) {
+          progressText.textContent = `${checkedCount}/${totalCount} Completed`;
+        }
+        
+        // Update checklist item styling
+        checkboxes.forEach(checkbox => {
+          const checklistItem = checkbox.closest('.checklist-item');
+          if (checkbox.checked) {
+            checklistItem.classList.add('completed');
+          } else {
+            checklistItem.classList.remove('completed');
+          }
+        });
+        
+        // Show completion message
+        if (checkedCount === totalCount && progressText) {
+          progressText.innerHTML = `<strong>All items completed! <i class="fas fa-check-circle"></i></strong>`;
+        }
+      }
+      
+      // Add event listeners to checkboxes
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProgress);
+      });
+      
+      // Initialize progress
+      updateProgress();
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Interactive Training iframe functionality
+      const trainingIframe = document.getElementById('training-iframe');
+      const loadingOverlay = document.getElementById('loading-overlay');
+      const reloadBtn = document.getElementById('reload-iframe-btn');
+      
+      // Hide loading overlay when iframe loads
+      if (trainingIframe && loadingOverlay) {
+        trainingIframe.addEventListener('load', function() {
+          setTimeout(function() {
+            loadingOverlay.classList.add('hidden');
+          }, 500);
+        });
+        
+        // Show loading overlay if iframe fails to load
+        trainingIframe.addEventListener('error', function() {
+          loadingOverlay.innerHTML = `
+            <div style="text-align: center;">
+              <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--warning-orange); margin-bottom: 15px;"></i>
+              <div class="loading-text">Failed to load training. Please check your connection.</div>
+              <button class="action-button" style="margin-top: 20px;" onclick="location.reload()">
+                <i class="fas fa-redo"></i> Retry
+              </button>
+            </div>
+          `;
+        });
+      }
+      
+      // Reload iframe button functionality
+      if (reloadBtn && trainingIframe) {
+        reloadBtn.addEventListener('click', function() {
+          if (loadingOverlay) {
+            loadingOverlay.classList.remove('hidden');
+            loadingOverlay.innerHTML = `
+              <div class="loading-spinner"></div>
+              <div class="loading-text">Reloading Interactive Training...</div>
+            `;
+          }
+          
+          // Force reload by changing src
+          const currentSrc = trainingIframe.src;
+          trainingIframe.src = '';
+          setTimeout(function() {
+            trainingIframe.src = currentSrc;
+          }, 100);
+        });
+      }
+
+      // Add scroll animation for sections
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections for scroll animations
+      document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+      });
+
+      // Add mobile menu toggle functionality (for responsive design)
+      const navLinks = document.querySelector('.nav-links');
+      const navContainer = document.querySelector('.nav-container');
+      
+      // Create mobile menu toggle button
+      const mobileMenuBtn = document.createElement('button');
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      mobileMenuBtn.className = 'mobile-menu-toggle';
+      mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+      
+      if (navContainer && navLinks) {
+        // Insert toggle button before nav links
+        const logo = navContainer.querySelector('.logo');
+        if (logo && logo.nextSibling) {
+          navContainer.insertBefore(mobileMenuBtn, logo.nextSibling);
+        } else {
+          navContainer.appendChild(mobileMenuBtn);
+        }
+        
+        // Toggle menu on button click
+        mobileMenuBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+          }
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+              navLinks.classList.remove('active');
+              const icon = mobileMenuBtn.querySelector('i');
+              if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+              }
+            }
+          });
+        });
+      }
+
+      // Store checklist progress in localStorage
+      checkboxes.forEach((checkbox, index) => {
+        // Load saved state
+        const savedState = localStorage.getItem(`checklist-item-${index}`);
+        if (savedState === 'true') {
+          checkbox.checked = true;
+        }
+        
+        // Save state on change
+        checkbox.addEventListener('change', function() {
+          localStorage.setItem(`checklist-item-${index}`, checkbox.checked);
+          updateProgress();
+        });
+      });
+      
+      // Update progress after loading saved states
+      updateProgress();
+    });
+
+    // Handle window resize for responsive adjustments
+    window.addEventListener('resize', function() {
+      const navLinks = document.querySelector('.nav-links');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+      
+      if (window.innerWidth > 768) {
+        if (navLinks) {
+          navLinks.classList.remove('active');
+          navLinks.style.display = 'flex';
+        }
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'none';
+      } else {
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'block';
+        if (navLinks && !navLinks.classList.contains('active')) {
+          navLinks.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
